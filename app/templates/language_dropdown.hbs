@@ -1,0 +1,15 @@
+<div id="language-dropdown">
+  <div class="btn-group">
+    <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+      <i class="icon-globe"></i> Language: {{Balanced.i18n.current_language_info.name}}
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      {{#each locale in Balanced.i18n.supported_languages }}
+        <li>
+            <a href="#" {{action switch locale.code target="view"}}>{{locale.name}}</a>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

@@ -8,6 +8,14 @@
 require('build/js/compiled-templates');
 
 /*
+ * I18n stuff
+ */
+require('app/i18n/locales/_base');
+require('app/i18n/locales/en_us');
+require('app/i18n/locales/zh_tw');
+require('app/i18n/init');
+
+/*
  * Helpers and utils - not static 3rd party libraries
  */
 require('app/lib/errors');
@@ -73,6 +81,7 @@ require('app/views/reset_password'); // depends on login
 require('app/views/results');
 require('app/views/search');
 require('app/views/welcome_transition');
+require('app/views/language_dropdown');
 
 require('app/views/marketplace/marketplace');
 require('app/views/marketplace/marketplace_settings');

@@ -9,12 +9,12 @@
 
               <form id="auth-form" {{ bindAttr class="loginError:error" }}>
                 {{view Ember.TextField type="email" name="email" valueBinding="email" placeholder="Email"}}
-                {{view Ember.TextField type="password" name="password" valueBinding="password" placeholder="Password" action="signIn"}}
+                {{view Ember.TextField type="password" name="password" valueBinding="password" placeholderTranslation="login.password" action="signIn"}}
                 <div class="clear"></div>
 
-                {{#linkTo "forgotPassword" class="pull-left forgot-password" }}Forgot password?{{/linkTo}}
+                {{#linkTo "forgotPassword" class="pull-left forgot-password" }}{{t login.forgot_password}}{{/linkTo}}
 
-                <button class="pull-right" {{action "signIn"}} type="button">Sign In</button>
+                <button class="pull-right" {{action "signIn"}} type="button">{{t login.signin}}</button>
               </form>
 
               {{#if loginError}}
@@ -23,11 +23,13 @@
                 </div>
               {{/if}}
 
-              <p class="label4b" id="get-started">New to Balanced? <a href="#/start" class="linky">Click here to get started</a>.</p>
+              <p class="label4b" id="get-started">{{t login.new_to_balanced}} <a href="#/start" class="linky">{{t login.get_started}}</a>.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  {{view Balanced.LanguageDropdownView}}
 </section>
