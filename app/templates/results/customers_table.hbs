@@ -10,9 +10,7 @@
     <tr>
         <td colspan="6" class="load-more-results">
             {{#if view.customers.loadingNextPage }}
-                <div class="loader-container">
-                    <span class="loader loading"></span>
-                </div>
+                <i class="balanced-loading-icon"></i>
             {{else}}
                 <a {{ action loadMore view.customers }}>Load more</a>
             {{/if}}
